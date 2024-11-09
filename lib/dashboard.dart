@@ -128,7 +128,8 @@ class _DashboardViewState extends State<DashboardView> {
             height: 200,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: 3, // Number of items in the list
+              itemCount:
+                  data.length, // Ensure the count matches your data length
               itemBuilder: (context, index) {
                 return customContainer(
                     data[index]['imgpaths'], data[index]['label'], index);

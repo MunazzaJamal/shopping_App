@@ -23,7 +23,7 @@ class _ItemDispState extends State<ItemDisp> {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -34,12 +34,13 @@ class _ItemDispState extends State<ItemDisp> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => DashboardView()));
+                              builder: (context) => const DashboardView()));
                     },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero, // Removes extra padding
-                      minimumSize: Size(30, 30), // Sets a small minimum size
-                      shape: CircleBorder(),
+                      minimumSize:
+                          const Size(30, 30), // Sets a small minimum size
+                      shape: const CircleBorder(),
                     ),
                     child: const Icon(
                       Icons.arrow_circle_left,
@@ -89,11 +90,7 @@ class _ItemDispState extends State<ItemDisp> {
           ]),
           Align(
             alignment: Alignment.centerLeft,
-            child: Container(height: 100, width: 200, child: Text('hello')),
-          ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: customContainer(100, 300, widget.imagename, 25, Colors.black,
+            child: customContainer(50, 300, widget.imagename, 25, Colors.black,
                 f: FontWeight.bold),
           ),
           Align(
@@ -120,6 +117,80 @@ class _ItemDispState extends State<ItemDisp> {
                   ],
                 ),
               )),
+          Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left: 10,
+                ),
+                child: customContainer(50, 300, 'Size', 20, Colors.black,
+                    f: FontWeight.bold),
+              )),
+          const Padding(
+            padding: EdgeInsets.only(left: 10.0),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Text('39', style: TextStyle(color: Colors.black)),
+                ),
+                SizedBox(width: 10),
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Text('39.5', style: TextStyle(color: Colors.black)),
+                ),
+                SizedBox(width: 10),
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Text('40', style: TextStyle(color: Colors.black)),
+                ),
+                SizedBox(width: 10),
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Text('40.5', style: TextStyle(color: Colors.black)),
+                ),
+                SizedBox(width: 10),
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Text('41.5', style: TextStyle(color: Colors.black)),
+                ),
+              ],
+            ),
+          ),
+          Align(
+              alignment: Alignment.centerLeft,
+              child: customContainer(50, 300, 'Description', 20, Colors.black,
+                  f: FontWeight.bold)),
+          SizedBox(height: 10),
+          Align(
+              alignment: Alignment.centerLeft,
+              child: customContainer(
+                50,
+                300,
+                'Engineered to crush any movement-based workout, these On sneakers enhance the labels original Cloud Sneaker with cutting edge technologies for a pair',
+                10,
+                Colors.grey,
+              )),
+          SizedBox(height: 20),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: customContainer(
+              50,
+              300,
+              'Total Price',
+              10,
+              Colors.grey,
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: customContainer(50, 300, widget.imageprice, 20, Colors.black,
+                f: FontWeight.bold),
+          ),
+          ElevatedButton(
+              onPressed: () {},
+              child: Text('Add to Cart',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)))
         ],
       ),
     );
