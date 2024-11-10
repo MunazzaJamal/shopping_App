@@ -20,21 +20,21 @@ class _DashboardViewState extends State<DashboardView> {
     },
     {
       'name': 'Axel Arigato',
-      'price': '\$245',
+      'price': '\$245.00',
       'brand': 'Clean 90 Triple Sneakers',
       'image':
           'https://cdn.pixabay.com/photo/2015/11/20/03/53/package-1052370_640.jpg',
     },
     {
       'name': 'Sveston',
-      'price': '\$435',
+      'price': '\$435.00',
       'brand': 'Man Watch',
       'image':
           'https://cdn.pixabay.com/photo/2014/07/31/23/00/wristwatch-407096_640.jpg',
     },
     {
       'name': 'Jewelry Line',
-      'price': '\$279',
+      'price': '\$279.00',
       'brand': 'Necklace',
       'image':
           'https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_640.jpg',
@@ -230,19 +230,19 @@ class _DashboardViewState extends State<DashboardView> {
 
   List popitems = [
     {
-      'name': 'The Marc Jacobs',
-      'price': '\$195.00',
-      'brand': 'Traveller Tote',
+      'name': 'Sveston',
+      'price': '\$435.00',
+      'brand': 'Man Watch',
       'image':
-          'https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_640.jpg'
+          'https://cdn.pixabay.com/photo/2014/07/31/23/00/wristwatch-407096_640.jpg',
     },
     {
-      'name': 'The Marc Jacobs',
-      'price': '\$195.00',
-      'brand': 'Traveller Tote',
+      'name': 'Jewelry Line',
+      'price': '\$279.00',
+      'brand': 'Necklace',
       'image':
-          'https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_640.jpg'
-    }
+          'https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_640.jpg',
+    },
   ];
 
   Widget popularItems(ind) {
@@ -310,7 +310,7 @@ class _DashboardViewState extends State<DashboardView> {
                 ),
               ],
             ),
-            SizedBox(height: 10, width: 40),
+            const SizedBox(height: 10, width: 40),
             SizedBox(
               height: 25,
               child: Text(
