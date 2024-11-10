@@ -86,7 +86,7 @@ class _ItemDispState extends State<ItemDisp> {
                 child: Icon(
                   Icons.favorite,
                   size: 20,
-                  // color: Colors.amber,
+                  color: Colors.amber,
                 ),
               ),
             ]),
@@ -141,7 +141,7 @@ class _ItemDispState extends State<ItemDisp> {
                         '(270 Reviews)',
                         style: TextStyle(fontSize: 15, color: Colors.black),
                       )),
-                      SizedBox(width: 150),
+                      SizedBox(width: 190),
                       SizedBox(
                           // width: 10,
                           child: Text(
@@ -228,23 +228,20 @@ class _ItemDispState extends State<ItemDisp> {
                       50, 300, widget.imageprice, 20, Colors.black,
                       f: FontWeight.bold),
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 10, bottom: 10),
-                    child: SizedBox(
-                      height: 50,
-                      width: 200,
-                      child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.black),
-                          child: const Text('Add to Cart',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: Colors.white))),
-                    ),
+                Padding(
+                  padding: EdgeInsets.only(right: 10, bottom: 10),
+                  child: SizedBox(
+                    height: 50,
+                    width: 200,
+                    child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black),
+                        child: const Text('Add to Cart',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                color: Colors.white))),
                   ),
                 ),
               ],

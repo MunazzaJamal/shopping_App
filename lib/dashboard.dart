@@ -214,7 +214,7 @@ class _DashboardViewState extends State<DashboardView> {
           SizedBox(
             height: 120,
             child: Padding(
-              padding: const EdgeInsets.only(left: 20.0),
+              padding: const EdgeInsets.only(left: 20.0, bottom: 10),
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: popitems.length,
@@ -456,16 +456,25 @@ class _DashboardViewState extends State<DashboardView> {
       // TextField()
     } else if (currentIndex == 1) {
       return Container(
-        child: const Text("Current Index 1"),
-      );
+          child: const Text(
+        "Shopping Cart",
+        style: TextStyle(
+            fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black),
+      ));
     } else if (currentIndex == 2) {
       return Container(
-        child: const Text("Current Index 2"),
-      );
+          child: const Text(
+        "Notifications",
+        style: TextStyle(
+            fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black),
+      ));
     } else if (currentIndex == 3) {
       return Container(
-        child: const Text("Current Index 3"),
-      );
+          child: const Text(
+        "Profile",
+        style: TextStyle(
+            fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black),
+      ));
     } else {
       return Container(
         child: const Text("Current Index Default"),
