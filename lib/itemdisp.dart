@@ -139,9 +139,9 @@ class _ItemDispState extends State<ItemDisp> {
                       SizedBox(
                           child: Text(
                         '(270 Reviews)',
-                        style: TextStyle(fontSize: 10, color: Colors.black),
+                        style: TextStyle(fontSize: 15, color: Colors.black),
                       )),
-                      SizedBox(width: 200),
+                      SizedBox(width: 150),
                       SizedBox(
                           // width: 10,
                           child: Text(
@@ -219,22 +219,35 @@ class _ItemDispState extends State<ItemDisp> {
                 Colors.grey,
               ),
             ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: customContainer(
-                  50, 300, widget.imageprice, 20, Colors.black,
-                  f: FontWeight.bold),
-            ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Add to Cart',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20))),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: customContainer(
+                      50, 300, widget.imageprice, 20, Colors.black,
+                      f: FontWeight.bold),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 10, bottom: 10),
+                    child: SizedBox(
+                      height: 50,
+                      width: 200,
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black),
+                          child: const Text('Add to Cart',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.white))),
+                    ),
+                  ),
+                ),
+              ],
             )
           ],
         ),
